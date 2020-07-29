@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: chmod 777 init.sh && ./init.sh &&pip install -r ./requirements/dev.txt && flask db init && flask db migrate && flask db upgrade
+    command: flask run --with-threads
